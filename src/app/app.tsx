@@ -1,5 +1,7 @@
-export function App() {
-  return (
-    <h1>Hello, world!</h1>
-  )
-}
+import Footer from "../components/footer";
+
+const App = () => {
+  return <Footer></Footer>;
+};
+
+export default App;
