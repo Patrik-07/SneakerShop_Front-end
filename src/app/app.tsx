@@ -1,14 +1,14 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "../components/layout/layout";
+import { Outlet } from "react-router-dom";
+
+import Footer from "../components/footer/footer";
+import Header from "../components/header/header";
 
 const App = () => {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout></Layout>}></Route>
-        </Routes>
-      </BrowserRouter>
+      <Header />
+      <Outlet />
+      <Footer />
     </>
   );
 };
