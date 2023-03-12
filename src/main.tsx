@@ -1,4 +1,4 @@
-import { render } from "preact";
+import ReactDOM from "react-dom";
 import App from "./app/app";
 
-render(<App />, document.getElementById("app") as HTMLElement);
+ReactDOM.render(<App></App>, document.getElementById("app"));

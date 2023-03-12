@@ -1,7 +1,16 @@
-import Footer from "../components/footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "../components/layout/layout";
 
 const App = () => {
-  return <Footer></Footer>;
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout></Layout>}></Route>
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 };
 
 export default App;
