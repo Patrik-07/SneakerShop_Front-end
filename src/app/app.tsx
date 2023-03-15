@@ -1,15 +1,17 @@
-import { Outlet } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Footer from "../components/footer/footer";
-import Header from "../components/header/header";
+import Layout from "../components/layout";
+import Home from "../pages/home";
 
 const App = () => {
   return (
-    <>
-      <Header />
-      <Outlet />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />}></Route>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 
