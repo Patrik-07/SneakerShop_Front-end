@@ -11,3 +11,42 @@ export const MenuButton = () => {
     </button>
   );
 };
+
+// const [isOpen, setIsOpen] = useState(false);
+
+// function toggleDropdown() {
+//   setIsOpen(!isOpen);
+// }
+
+// return (
+//   <div className="relative">
+//     <button
+//       className="block text-gray-700 text-sm font-bold py-2 px-4 rounded"
+//       onClick={toggleDropdown}
+//     >
+//       Menu
+//     </button>
+//     {isOpen && (
+//       <div className="absolute left-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl">
+//         <a
+//           href="#"
+//           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+//         >
+//           Item 1
+//         </a>
+//         <a
+//           href="#"
+//           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+//         >
+//           Item 2
+//         </a>
+//         <a
+//           href="#"
+//           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+//         >
+//           Item 3
+//         </a>
+//       </div>
+//     )}
+//   </div>
+// );
