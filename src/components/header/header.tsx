@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-between px-10">
       <div className="flex justify-items-end p-4">
         <MenuButton onClick={incrementItemCount}></MenuButton>
         <SearchInput></SearchInput>

@@ -1,11 +1,13 @@
-import { HeroExampleOne } from "./heroes/examples/example-hero-one";
-import { HeroExampleThree } from "./heroes/examples/example-hero-three";
-import { HeroExampleTwo } from "./heroes/examples/example-hero-two";
+import {
+  HeroExampleOne,
+  HeroExampleTwo,
+  HeroExampleThree,
+} from "./heroes/examples/example-heros";
 
 const Home = () => {
   return (
     <div className="relative flex">
-      <HeroExampleTwo />
+      <HeroExampleThree />
     </div>
   );
 };
