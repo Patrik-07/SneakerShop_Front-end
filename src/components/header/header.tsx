@@ -1,28 +1,29 @@
-import {
-  userIconButton,
-  wishlistIconButton,
-  cartIconButton,
-} from "./icon-button";
-import { MenuButton } from "./menu-button";
-import { SearchInput } from "./search-input";
+import { useState } from "react";
 
-import {
-  faHeart,
-  faShoppingCart,
-  faUser,
-} from "@fortawesome/free-solid-svg-icons";
+import { MenuButton } from "./menu/menu-button";
+import { SearchInput } from "./menu/search-input";
+
+import { UserIconButton } from "./icons/user";
+import { WishlistIconButton } from "./icons/wishlist";
+import { ShoppingCartIconButton } from "./icons/shoppingcart";
 
 const Header = () => {
+  const [itemCount, setCount] = useState<number>(0);
+
+  const incrementItemCount = () => {
+    setCount((prevItemCount) => prevItemCount + 1);
+  };
+
   return (
     <div className="flex justify-between">
       <div className="flex justify-items-end p-4">
-        <MenuButton></MenuButton>
+        <MenuButton onClick={incrementItemCount}></MenuButton>
         <SearchInput></SearchInput>
       </div>
       <div className="flex-wrap justify-items-end p-4">
-        {userIconButton}
-        {wishlistIconButton}
-        {cartIconButton}
+        <UserIconButton />
+        <WishlistIconButton />
+        <ShoppingCartIconButton itemCount={itemCount} />
       </div>
     </div>
   );
