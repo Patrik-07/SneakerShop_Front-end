@@ -1,3 +1,5 @@
+import { HeroExampleOne } from "./heroes/examples/example-hero-one";
+import { HeroExampleThree } from "./heroes/examples/example-hero-three";
 import { HeroExampleTwo } from "./heroes/examples/example-hero-two";
 
 const Home = () => {
