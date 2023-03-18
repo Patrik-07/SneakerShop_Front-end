@@ -1,14 +1,21 @@
-import { Hero } from "./hero/hero";
-import { ExampleHeroContent1 } from "./hero-contens/example-hero-content1";
+import { HeroExampleTwo } from "./heroes/examples/example-hero-two";
 
 const Home = () => {
   return (
     <div className="relative flex">
-      <Hero>
-        <ExampleHeroContent1 />
-      </Hero>
+      <HeroExampleTwo />
     </div>
   );
 };
 
 export default Home;
+
+// const Home = () => {
+//   return (
+//     <div className="relative flex">
+//       <Hero color="#FFE2B5">
+//         <ExampleHeroContent1 />
+//       </Hero>
+//     </div>
+//   );
+// };

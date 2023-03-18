@@ -6,16 +6,18 @@ import Home from "../pages/home/home";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />}></Route>
-        </Route>
-        <Route path="/about" element={<Layout />}>
-          <Route element={<About />}></Route>
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <div className="bg-[#e7e9eb]">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />}></Route>
+          </Route>
+          <Route path="/about" element={<Layout />}>
+            <Route element={<About />}></Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 };
 

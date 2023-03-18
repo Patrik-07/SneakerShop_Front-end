@@ -12,7 +12,7 @@ export const IconButton: React.FC<InputProps> = ({
   children,
 }) => {
   return (
-    <button className="mt-2 p-1 ml-10">
+    <button className="mt-2 p-1 ml-4 md:ml-12">
       <div className="flex items-center">
         <Icon iconDefinition={iconDefinition} />
         {children}

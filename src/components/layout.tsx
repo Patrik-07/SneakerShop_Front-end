@@ -2,9 +2,12 @@ import { Outlet } from "react-router-dom";
 import Header from "./header/header";
 import Footer from "./footer";
 
+// TODO:
+// remove layout padding bottom 10
+
 const Layout = () => {
   return (
-    <div className="min-w-screen mx-auto max-w-screen-xl">
+    <div className="min-w-screen mx-auto max-w-screen-xl bg-white px-10 shadow-2xl pb-10">
       <div>
         <Header></Header>
         <Outlet></Outlet>

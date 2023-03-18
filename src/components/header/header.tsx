@@ -15,12 +15,12 @@ const Header = () => {
   };
 
   return (
-    <div className="flex justify-between">
+    <div className="flex items-center justify-between">
       <div className="flex justify-items-end p-4">
         <MenuButton onClick={incrementItemCount}></MenuButton>
         <SearchInput></SearchInput>
       </div>
-      <div className="flex-wrap justify-items-end p-4">
+      <div className="flex flex-wrap justify-items-end p-4">
         <UserIconButton />
         <WishlistIconButton />
         <ShoppingCartIconButton itemCount={itemCount} />
@@ -30,3 +30,9 @@ const Header = () => {
 };
 
 export default Header;
+
+// <img
+// className="h-10 w-auto pl-4"
+// src="src\assets\header\logo.png"
+// alt=""
+// />
