@@ -1,3 +1,4 @@
+import { ExampleHeroes } from "./hero/heroes";
 import {
   HeroExampleOne,
   HeroExampleTwo,
@@ -7,7 +8,7 @@ import {
 const Home = () => {
   return (
     <div className="relative flex">
-      <HeroExampleThree />
+      <ExampleHeroes />
     </div>
   );
 };
