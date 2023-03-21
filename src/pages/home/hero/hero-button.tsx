@@ -22,12 +22,12 @@ const HeroButton = ({ iconDefinition, className }: InputProps) => {
 
 export const LeftHeroButton = () => {
   return (
-    <HeroButton iconDefinition={faArrowLeft} className="absolute left-0" />
+    <HeroButton iconDefinition={faArrowLeft} className="absolute left-10" />
   );
 };
 
 export const RightHeroButton = () => {
   return (
-    <HeroButton iconDefinition={faArrowRight} className="absolute right-0" />
+    <HeroButton iconDefinition={faArrowRight} className="absolute right-10" />
   );
 };

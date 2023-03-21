@@ -1,33 +1,36 @@
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Icon } from "../../../../utils/icon";
 
 export const ExampleHeroContent1 = () => {
   return (
-    <div className="flex">
-      <div className="mr-10 ml-4">
-        <h1 className="text-7xl p-2">Are you ready to</h1>
-        <h1 className="text-7xl font-bold p-2">lead the way</h1>
-        <h1 className="text-2xl p-2 mt-5">
+    <div className="flex flex-row h-96 w-full">
+      <div className="pl-10 py-6 grow">
+        <h1 className="xl:text-7xl lg:text-6xl text-5xl xl:px-2 px-6 xl:py-2 py-4">
+          Are you ready to
+        </h1>
+        <h1 className="xl:text-7xl lg:text-6xl text-5xl font-bold xl:px-2 px-6 xl:py-2 py-3">
+          lead the way
+        </h1>
+        <h1 className="lg:text-2xl text-lg xl:px-2 px-6 py-6">
           Luxury meets ultimate sitting comfort
         </h1>
-        <div>
-          <button className="flex items-center justify-center text-3xl pb-3 pt-2 px-4 mt-8 rounded-full overflow-hidden bg-black shadow-xl text-amber-300">
-            <h1>Discover more</h1>
-          </button>
-        </div>
+        <button className="flex items-center justify-center xl:text-4xl lg:text-4xl text-2xl font-bold xl:px-5 px-5 pt-2 pb-2 mt-4 lg:px-10 lg:pt-4 lg:pb-5 lg:mt-8 rounded-full overflow-hidden bg-black shadow-xl text-[#D0AD37]">
+          <h1>Discover more</h1>
+          <FontAwesomeIcon
+            color="#D0AD37"
+            icon={faArrowRight}
+            className="text-4xl pl-4 pt-2"
+          />
+        </button>
       </div>
-      <div className="relative top-10">
+      <div className="md:block pt-10 pr-20 flex items-end grow-0">
         <img
-          className="relative top-0 left-0 w-full h-full object-cover z-20"
+          className="h-full w-full object-contain"
           src="src\assets\home\hero1\hero1.png"
           alt=""
         />
-        <div className="absolute ml-5 top-5 right-0 bg-opacity-80 z-10">
-          <h1 className="text-[300px] font-bold text-center text-opacity-10 text-gray-900 leading-none">
-            HOT
-          </h1>
-        </div>
       </div>
     </div>
   );

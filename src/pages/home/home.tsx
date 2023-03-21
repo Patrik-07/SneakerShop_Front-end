@@ -1,4 +1,4 @@
-import { ExampleHeroes } from "./hero/heroes";
+import { ExampleHero } from "./hero/heroes";
 import {
   HeroExampleOne,
   HeroExampleTwo,
@@ -7,20 +7,10 @@ import {
 
 const Home = () => {
   return (
-    <div className="relative flex">
-      <ExampleHeroes />
+    <div className="h-fit">
+      <ExampleHero />
     </div>
   );
 };
 
 export default Home;
-
-// const Home = () => {
-//   return (
-//     <div className="relative flex">
-//       <Hero color="#FFE2B5">
-//         <ExampleHeroContent1 />
-//       </Hero>
-//     </div>
-//   );
-// };

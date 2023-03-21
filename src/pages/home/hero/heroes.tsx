@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Hero } from "../hero/hero";
+import { ExampleHeroContent1 } from "../heroes/hero-contens/example-hero-content1";
 
 type InputProps = {
   heroes: React.ReactElement[];
@@ -19,7 +20,7 @@ const Heroes = ({ heroes }: InputProps) => {
   }
 
   useEffect(() => {
-    const intervalId = setInterval(update, 3000);
+    const intervalId = setInterval(() => {}, 3000);
     return () => clearInterval(intervalId);
   }, []);
 
@@ -33,17 +34,22 @@ const Heroes = ({ heroes }: InputProps) => {
     );
   };
 
-  return <div>{getPrevCurrNext(heroes)}</div>;
+  // return <div className="flex w-full">{getPrevCurrNext(heroes)}</div>;
+  return (
+    <div className="absolute top-0 left-0 right-0 bottom-0 text-center">
+      <div className="absolute top-0 bottom-0 left-0 right-0 overflow-hidden whitespace-nowrap">
+        <Hero color="bg-[#FFE2B5]"></Hero>
+        <Hero color="bg-[#FFDC62]"></Hero>
+        <Hero color="bg-[#142C3E]"></Hero>
+      </div>
+    </div>
+  );
 };
 
-export const ExampleHeroes = () => {
+export const ExampleHero = () => {
   return (
-    <Heroes
-      heroes={[
-        <Hero color="bg-[#FFE2B5]"></Hero>,
-        <Hero color="bg-[#FFDC62]"></Hero>,
-        <Hero color="bg-[#142C3E]"></Hero>,
-      ]}
-    ></Heroes>
+    <Hero color="bg-[#FFE2B5]">
+      <ExampleHeroContent1></ExampleHeroContent1>
+    </Hero>
   );
 };
