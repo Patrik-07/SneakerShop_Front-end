@@ -7,7 +7,7 @@ type InputProps = {
 
 export const Hero = ({ color, children }: InputProps) => {
   return (
-    <div className="top-0 left-0 w-full h-fit relative flex items-center px-14">
+    <div className="top-0 left-0 w-full h-full relative flex items-center px-14 pt-2">
       <LeftHeroButton />
       <div className={`${color} rounded-[18px] relative w-full h-full z-0`}>
         {children}

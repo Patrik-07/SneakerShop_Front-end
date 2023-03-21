@@ -1,14 +1,11 @@
+import { Cards } from "./cards/cards";
 import { ExampleHero } from "./hero/heroes";
-import {
-  HeroExampleOne,
-  HeroExampleTwo,
-  HeroExampleThree,
-} from "./heroes/examples/example-heros";
 
 const Home = () => {
   return (
-    <div className="h-fit">
+    <div className="flex flex-col h-fit">
       <ExampleHero />
+      <Cards />
     </div>
   );
 };

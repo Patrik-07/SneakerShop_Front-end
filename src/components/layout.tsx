@@ -7,7 +7,7 @@ import Footer from "./footer";
 
 const Layout = () => {
   return (
-    <div className="min-w-screen mx-auto max-w-screen-xl bg-white shadow-2xl pb-10">
+    <div className="min-w-screen mx-auto max-w-screen-lg bg-white shadow-2xl">
       <div>
         <Header></Header>
         <Outlet></Outlet>
