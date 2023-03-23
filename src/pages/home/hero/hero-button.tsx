@@ -8,11 +8,13 @@ import { Icon } from "../../../utils/icon";
 type InputProps = {
   className?: string;
   iconDefinition: IconDefinition;
+  onClick: () => void;
 };
 
-const HeroButton = ({ iconDefinition, className }: InputProps) => {
+const HeroButton = ({ iconDefinition, className, onClick }: InputProps) => {
   return (
     <button
+      onClick={onClick}
       className={`${"flex items-center justify-center h-10 w-10 rounded-full overflow-hidden bg-white shadow-xl z-10"} ${className}`}
     >
       <Icon iconDefinition={iconDefinition} />
@@ -20,14 +22,26 @@ const HeroButton = ({ iconDefinition, className }: InputProps) => {
   );
 };
 
-export const LeftHeroButton = () => {
+type ButtonInputProps = {
+  onClick: () => void;
+};
+
+export const LeftHeroButton = ({ onClick }: ButtonInputProps) => {
   return (
-    <HeroButton iconDefinition={faArrowLeft} className="absolute left-10" />
+    <HeroButton
+      onClick={onClick}
+      iconDefinition={faArrowLeft}
+      className="absolute left-10"
+    />
   );
 };
 
-export const RightHeroButton = () => {
+export const RightHeroButton = ({ onClick }: ButtonInputProps) => {
   return (
-    <HeroButton iconDefinition={faArrowRight} className="absolute right-10" />
+    <HeroButton
+      onClick={onClick}
+      iconDefinition={faArrowRight}
+      className="absolute right-10"
+    />
   );
 };

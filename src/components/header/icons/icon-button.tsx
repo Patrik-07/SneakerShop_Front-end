@@ -1,22 +1,22 @@
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link, NavLink } from "react-router-dom";
 import { Icon } from "../../../utils/icon";
 
 type InputProps = {
   iconDefinition: IconDefinition;
   children?: React.ReactNode;
+  to: string;
 };
 
-export const IconButton: React.FC<InputProps> = ({
-  iconDefinition,
-  children,
-}) => {
+export const IconButton = ({ iconDefinition, children, to }: InputProps) => {
   return (
-    <button className="mt-2 p-1 ml-4 md:ml-12">
-      <div className="flex items-center">
-        <Icon iconDefinition={iconDefinition} />
-        {children}
-      </div>
-    </button>
+    <Link to={to}>
+      <button className="mt-2 p-1 ml-4 md:ml-12">
+        <div className="flex items-center">
+          <Icon iconDefinition={iconDefinition} />
+          {children}
+        </div>
+      </button>
+    </Link>
   );
 };

@@ -1,12 +1,18 @@
-import { Cards } from "./cards/cards";
-import { ExampleHero } from "./hero/heroes";
+import { ExampleHomeContent } from "./example/example-home-content";
+
+type HomeContentInputProps = {
+  children: React.ReactNode;
+};
+
+const HomeContent = ({ children }: HomeContentInputProps) => {
+  return <div className="flex flex-col">{children}</div>;
+};
 
 const Home = () => {
   return (
-    <div className="flex flex-col h-fit">
-      <ExampleHero />
-      <Cards />
-    </div>
+    <HomeContent>
+      <ExampleHomeContent />
+    </HomeContent>
   );
 };
 
