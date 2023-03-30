@@ -4,7 +4,11 @@ type HeroSideInputProps = {
 };
 
 const HeroSide = ({ className, color }: HeroSideInputProps) => {
-  return <div className={`absolute ${className} ${color} h-80 w-8`}></div>;
+  return (
+    <div
+      className={`absolute ${className} ${color} h-full w-8 hidden sm:block`}
+    ></div>
+  );
 };
 
 type SpecifiedHeroSideInputProps = {

@@ -5,7 +5,7 @@ type InputProps = {
 export const HeroTimer = ({ percent }: InputProps) => {
   return (
     <div className="relative">
-      <div className="absolute top-[132px] right-[420px] transform">
+      <div className="absolute top-[132px] right-[420px]">
         <div
           className={`xl:px-10 xl:py-1 rounded-full bg-white shadow-xl bg-opacity-30`}
         >

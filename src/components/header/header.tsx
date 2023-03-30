@@ -9,7 +9,7 @@ import { ShoppingCartIconButton } from "./icons/shoppingcart";
 
 const Header = () => {
   return (
-    <div className="flex items-center justify-between px-10 pt-2">
+    <div className="flex items-center justify-between sm:px-10 px-2 pt-2">
       <div className="flex justify-items-end p-4">
         <MenuButton></MenuButton>
         <SearchInput></SearchInput>

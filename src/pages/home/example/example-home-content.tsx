@@ -7,7 +7,6 @@ export const ExampleHomeContent = () => {
     <>
       <ExampleHeroContainer />
       <ExampleCardContainer />
-      <CustomItem></CustomItem>
     </>
   );
 };

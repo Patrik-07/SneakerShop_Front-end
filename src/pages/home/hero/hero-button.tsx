@@ -31,7 +31,7 @@ export const LeftHeroButton = ({ onClick }: ButtonInputProps) => {
     <HeroButton
       onClick={onClick}
       iconDefinition={faArrowLeft}
-      className="absolute left-10"
+      className="absolute sm:left-10 left-2"
     />
   );
 };
@@ -41,7 +41,7 @@ export const RightHeroButton = ({ onClick }: ButtonInputProps) => {
     <HeroButton
       onClick={onClick}
       iconDefinition={faArrowRight}
-      className="absolute right-10"
+      className="absolute sm:right-10 right-2"
     />
   );
 };
