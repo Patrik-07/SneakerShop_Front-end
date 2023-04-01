@@ -8,7 +8,7 @@ import { Icon } from "../../../utils/icon";
 type InputProps = {
   className?: string;
   iconDefinition: IconDefinition;
-  onClick: () => void;
+  onClick?: () => void;
 };
 
 const HeroButton = ({ iconDefinition, className, onClick }: InputProps) => {
@@ -23,7 +23,7 @@ const HeroButton = ({ iconDefinition, className, onClick }: InputProps) => {
 };
 
 type ButtonInputProps = {
-  onClick: () => void;
+  onClick?: () => void;
 };
 
 export const LeftHeroButton = ({ onClick }: ButtonInputProps) => {
@@ -31,7 +31,7 @@ export const LeftHeroButton = ({ onClick }: ButtonInputProps) => {
     <HeroButton
       onClick={onClick}
       iconDefinition={faArrowLeft}
-      className="absolute sm:left-10 left-2"
+      className="absolute"
     />
   );
 };
@@ -41,7 +41,7 @@ export const RightHeroButton = ({ onClick }: ButtonInputProps) => {
     <HeroButton
       onClick={onClick}
       iconDefinition={faArrowRight}
-      className="absolute sm:right-10 right-2"
+      className="absolute"
     />
   );
 };
