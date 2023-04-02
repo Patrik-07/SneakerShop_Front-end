@@ -15,7 +15,7 @@ const HeroButton = ({ iconDefinition, className, onClick }: InputProps) => {
   return (
     <button
       onClick={onClick}
-      className={`${"flex items-center justify-center h-10 w-10 rounded-full overflow-hidden bg-white shadow-xl z-10"} ${className}`}
+      className={`${"flex items-center justify-center h-10 w-10 rounded-full bg-white shadow-xl z-10"} ${className}`}
     >
       <Icon iconDefinition={iconDefinition} />
     </button>

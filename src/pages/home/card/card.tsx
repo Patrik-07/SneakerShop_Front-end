@@ -25,7 +25,7 @@ export const Card = ({ color, shoeData }: InputProps) => {
         </div>
         <div className="w-full h-full flex justify-center items-center">
           <img
-            className="drop-shadow-[0_25px_25px_rgba(0,0,0,0.5)] sm:p-10 md:p-5 lg:p-5"
+            className="drop-shadow-[0_25px_25px_rgba(0,0,0,0.5)] sm:p-10 md:p-5 lg:p-10"
             src={shoeData.image}
           />
         </div>
