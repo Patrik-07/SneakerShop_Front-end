@@ -16,4 +16,6 @@ const Home = () => {
   );
 };
 
+const asd = 5;
+
 export default Home;
