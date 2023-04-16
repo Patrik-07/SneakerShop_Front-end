@@ -5,7 +5,7 @@ type HomeContentInputProps = {
 };
 
 const HomeContent = ({ children }: HomeContentInputProps) => {
-  return <div className="flex flex-col">{children}</div>;
+  return <div className="flex flex-col pt-2">{children}</div>;
 };
 
 const Home = () => {
@@ -15,7 +15,5 @@ const Home = () => {
     </HomeContent>
   );
 };
-
-const asd = 5;
 
 export default Home;

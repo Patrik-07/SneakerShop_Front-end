@@ -1,17 +1,21 @@
-import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Icon } from "../../../utils/icon";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 type InputProps = {
   iconDefinition: IconDefinition;
   children?: React.ReactNode;
-  to: string;
+  linkTo: string;
 };
 
-export const IconButton = ({ iconDefinition, children, to }: InputProps) => {
+export const IconButton = ({
+  iconDefinition,
+  children,
+  linkTo,
+}: InputProps) => {
   return (
-    <Link to={to}>
-      <button className="mt-2 p-1 ml-4 md:ml-12">
+    <Link to={linkTo}>
+      <button>
         <div className="flex items-center">
           <Icon iconDefinition={iconDefinition} />
           {children}

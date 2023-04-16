@@ -1,34 +1,50 @@
-interface ShoeData {
+import { useState } from "react";
+import { CardPriceContainer, ShoePrice } from "./card-price-container";
+import { CardTagContainer, ShoeTags } from "./card-tag-container";
+import { CardStyleSelector, ShoeStyle } from "./card-style-selector";
+
+export interface ShoeData {
   name: string;
-  price: string;
-  image: string;
+  price: ShoePrice;
+  tags?: ShoeTags;
+  styles: ShoeStyle[];
 }
 
 type InputProps = {
   shoeData: ShoeData;
   color: string;
-  children?: React.ReactNode;
-  className?: string;
 };
 
-export const Card = ({ color, children, className, shoeData }: InputProps) => {
+export const Card = ({ color, shoeData }: InputProps) => {
+  const [shoeStyleIndex, setShoeStyle] = useState(0);
+
+  function setCurrentShoeStyle(f_shoestyle: number): void {
+    setShoeStyle(f_shoestyle);
+  }
+
   return (
-    <div className={`w-full h-full flex flex-col ${className}`}>
+    <div className={`w-full h-full flex flex-col`}>
       <button
-        className={`${color} rounded-[18px] w-48 h-52 flex items-center pl-2 pr-5 drop-shadow-md`}
+        className={`${color} rounded-[18px] w-48 h-52 flex items-center pl-2 pr-5 drop-shadow-md z-20`}
       >
-        <div className="absolute top-0 left-6 bg-[#E76300] h-6 w-16 rounded-br-[20px] flex items-center">
-          <span className="text-white text-[10px] absolute left-7">NEW</span>
-        </div>
-        <div className="absolute top-0 left-0 bg-[#0077FF] h-6 w-12 rounded-tl-[18px] rounded-br-[20px] flex items-center justify-center">
-          <span className="text-white text-[10px]">NEW</span>
-        </div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black drop-shadow-[0_25px_25px_rgba(0,0,0,0.5)]"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black drop-shadow-[0_25px_25px_rgba(0,0,0,1)]"></div>
-        <img className="transform -rotate-[25deg]" src={shoeData.image} />
+        <CardTagContainer shoeTags={shoeData.tags}></CardTagContainer>
+        <img
+          className="pt-2 pl-3 drop-shadow-[0_15px_15px_rgba(0,0,0,0.65)]"
+          src={shoeData.styles[shoeStyleIndex].image}
+        />
       </button>
-      <h1 className="text-lg font-bold pt-3 pl-2">{shoeData.name}</h1>
-      <h1 className="pl-2">{shoeData.price}</h1>
+      <div className="relative w-full h-16">
+        <div className="absolute inset-0 z-10">
+          <h1 className="text-lg font-bold bg-white pt-3 pl-2">
+            {shoeData.name}
+          </h1>
+          <CardPriceContainer shoePrice={shoeData.price}></CardPriceContainer>
+        </div>
+        <CardStyleSelector
+          shoeStyles={shoeData.styles}
+          onMouse={setShoeStyle}
+        ></CardStyleSelector>
+      </div>
     </div>
   );
 };

@@ -89,11 +89,11 @@ export const HeroContainer = ({ children }: InputProps) => {
   };
 
   return (
-    <div className="top-0 left-0 w-full h-full relative flex items-center px-14 pt-2">
+    <div className="top-0 left-0 w-full h-full relative flex items-center px-14">
       <LeftHeroSide color={getNextHero().props.color} />
-      <LeftHeroButton onClick={switchToPrev} />
+      <LeftHeroButton onClick={switchToNext} />
       {getCurrentHero()}
-      <RightHeroButton onClick={switchToNext} />
+      <RightHeroButton onClick={switchToPrev} />
       <HeroTimer percent={percent}></HeroTimer>
       <RightHeroSide color={getPrevHero().props.color} />
     </div>

@@ -1,4 +1,4 @@
-import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 type InputProps = {
@@ -11,7 +11,7 @@ export const Icon = ({ className, iconDefinition }: InputProps) => {
     <FontAwesomeIcon
       color="#142C3E"
       icon={iconDefinition}
-      className={`text-xl ${className}`}
+      className={`text-2xl ${className}`}
     />
   );
 };
