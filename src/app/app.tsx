@@ -5,8 +5,8 @@ import Home from "../pages/home/home";
 import Cart from "../pages/cart/cart";
 import WishList from "../pages/wishlist/wishlist";
 import User from "../pages/user/user";
-import SignInForm from "../pages/user/signin-form";
-import SignUpForm from "../pages/user/signup-form";
+import SignInForm from "../pages/user/user-signin-form";
+import SignUpForm from "../pages/user/user-signup-form";
 
 const App = () => {
   return (

@@ -11,7 +11,7 @@ type InputProps = {
 const CustomItem = ({ images }: InputProps) => {
   const [currentImage, setCurrentImage] = useState(images.current());
   return (
-    <div className="top-0 left-0 w-full h-[400px] relative flex items-center justify-center drop-shadow-md px-14">
+    <div className="top-0 left-0 w-full h-[400px] relative flex items-center justify-center drop-shadow-md px-14 pb-2">
       <div
         className={`rounded-[18px] relative w-full h-full bg-blue-300 drop-shadow-sm`}
       >
