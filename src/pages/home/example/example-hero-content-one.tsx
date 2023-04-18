@@ -4,17 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export const ExampleHeroContentOne = () => {
   return (
     <div className="flex flex-row h-full w-full">
-      <div className="xl:pl-12 pl-10 py-6 grow">
-        <h1 className="xl:text-6xl lg:text-6xl text-5xl xl:px-2 px-6 xl:py-2 py-4">
-          Are you ready to
-        </h1>
-        <h1 className="xl:text-6xl lg:text-6xl text-5xl font-bold xl:px-2 px-6 xl:py-2 py-3">
-          lead the way
-        </h1>
-        <h1 className="xl:text-2xl text-lg xl:px-3 px-6 xl:pt-2 xl:pb-5">
+      <div className="pl-12 py-6 grow">
+        <h1 className="text-6xl px-2 py-2">Are you ready to</h1>
+        <h1 className="text-6xl font-bold px-2 py-2">lead the way</h1>
+        <h1 className="text-2xl px-3 pt-2 pb-5">
           Luxury meets ultimate sitting comfort
         </h1>
-        <button className="flex items-center justify-center xl:text-2xl lg:text-4xl text-2xl font-bold xl:px-6 xl:pb-2 xl:pt-1 rounded-full overflow-hidden bg-black shadow-xl text-[#D0AD37]">
+        <button className="flex items-center justify-center text-2xl font-bold px-6 pb-2 pt-1 rounded-full overflow-hidden ml-1 bg-black shadow-xl text-[#D0AD37]">
           <h1>Discover more</h1>
           <FontAwesomeIcon
             color="#D0AD37"
@@ -23,7 +19,7 @@ export const ExampleHeroContentOne = () => {
           />
         </button>
       </div>
-      <div className="md:block pt-10 xl:pr-10 pr-10 flex items-end grow-0 z-10">
+      <div className="pt-10 pr-10 flex items-end grow-0 z-10">
         <img
           className="h-full w-full object-contain"
           src="src\assets\home\hero1\hero1.png"

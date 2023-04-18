@@ -8,8 +8,8 @@ import { FooterIconButton } from "./footer-icon-button";
 
 const Footer = () => {
   return (
-    <div className="flex-grow relative h-60">
-      <div className="absolute top-0 bottom-0 left-0 right-0 px-14 pt-8 pb-8">
+    <div className="flex-grow relative h-60 drop-shadow-md">
+      <div className="absolute top-0 bottom-0 left-0 right-0 px-14 pt-10 pb-8">
         <div
           className={`bg-red-300 rounded-t-[18px] rounded-[18px] w-full h-full z-0 flex flex-col justify-center items-center`}
         >
