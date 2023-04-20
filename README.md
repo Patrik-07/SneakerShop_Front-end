@@ -1,4 +1,11 @@
 # SneakerShop_Front-end
+Sneaker shoe e-Commerce web app. 
+Used techologies:
+  * React
+  * TypeScript
+  * Tailwind CSS
+  * Vite
+
 ## Home
 ![2023-04-16_22h59_20](https://user-images.githubusercontent.com/60797275/232341915-dc41bb5b-5141-43a5-a082-7e4bf203a117.png)
 ## Sign in
